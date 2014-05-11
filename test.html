@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Flex</title>
+  </head>
+  <body>
+    <script src="build/index.js"></script>
+    <script>
+      var support = require('./index.js')()
+      Object.keys(support).forEach(function (name) {
+        var p = document.createElement('p')
+        p.textContent = name + ': ' + (support[name] ? 'yes' : 'no')
+        document.body.appendChild(p)
+      })
+    </script>
+  </body>
+</html>
