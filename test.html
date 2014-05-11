@@ -6,7 +6,7 @@
   <body>
     <script src="build/index.js"></script>
     <script>
-      var support = require('./index.js')()
+      var support = require('./index.js')
       Object.keys(support).forEach(function (name) {
         var p = document.createElement('p')
         p.textContent = name + ': ' + (support[name] ? 'yes' : 'no')

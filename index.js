@@ -15,11 +15,9 @@ var supported
 
 cssflex()
 
-export default cssflex
+export default supported
 
 function cssflex() {
-  if (supported) return supported
-
   supported = {}
 
   // tests
@@ -33,8 +31,6 @@ function cssflex() {
   supported.legacy = supported.flexboxlegacy
   supported.tweener = supported.flexboxtweener
   supported.wrap = supported.flexwrap
-
-  return supported
 }
 
 function test(prop, name) {
