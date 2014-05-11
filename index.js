@@ -11,27 +11,21 @@ var prefixes = [
   ''
 ]
 
-var supported
+var supported = {}
 
-cssflex()
+// tests
+test('flex-basis: 1px;', 'flexbox')
+test('box-direction: reverse;', 'flexboxlegacy')
+test('flex-align: end;', 'flexboxtweener')
+test('flex-wrap: wrap;', 'flexwrap')
+
+// aliases
+supported.flex = supported.flexbox
+supported.legacy = supported.flexboxlegacy
+supported.tweener = supported.flexboxtweener
+supported.wrap = supported.flexwrap
 
 export default supported
-
-function cssflex() {
-  supported = {}
-
-  // tests
-  test('flex-basis: 1px;', 'flexbox')
-  test('box-direction: reverse;', 'flexboxlegacy')
-  test('flex-align: end;', 'flexboxtweener')
-  test('flex-wrap: wrap;', 'flexwrap')
-
-  // aliases
-  supported.flex = supported.flexbox
-  supported.legacy = supported.flexboxlegacy
-  supported.tweener = supported.flexboxtweener
-  supported.wrap = supported.flexwrap
-}
 
 function test(prop, name) {
   var el = document.createElement('div')
